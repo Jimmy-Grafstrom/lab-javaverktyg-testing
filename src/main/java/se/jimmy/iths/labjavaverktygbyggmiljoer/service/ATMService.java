@@ -17,8 +17,8 @@ public class ATMService {
         accountComponent.deposit(amount);
     }
 
-    public void withdrawExecute () {
-
+    public void withdrawExecute (int amount) {
+//        if (amount)
     }
     public int getBalance() {
         return accountComponent.getBalance();
