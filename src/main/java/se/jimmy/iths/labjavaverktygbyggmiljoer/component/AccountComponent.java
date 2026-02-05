@@ -13,8 +13,8 @@ public class AccountComponent {
         this.balance += amount;
     }
 
-    public int withdraw(int change) {
-        return balance -= change;
+    public void withdraw(int amount) {
+        this.balance -= amount;
     }
 
     public int printBalance() {
