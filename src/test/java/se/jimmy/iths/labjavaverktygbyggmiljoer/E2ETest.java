@@ -23,6 +23,7 @@ public class E2ETest {
     static void launchBrowser() {
         playwright = Playwright.create();
     }
+
     @AfterAll
     static void closePlayWright() {
         playwright.close();
@@ -51,6 +52,6 @@ public class E2ETest {
     void pageDisplaysCorrectContent() {
         page.navigate("http://localhost:" + port + "/atm");
         assertThat(page.locator("h1")).containsText("Välkommen till Bankomaten");
-                assertThat(page.locator("body")).containsText("Ditt nuvarande saldo är:");
+        assertThat(page.locator("body")).containsText("Ditt nuvarande saldo är:");
     }
 }
